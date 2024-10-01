@@ -42,6 +42,7 @@ class UserModel extends BaseModel {
         return $this->delete($sql);
 
     }
+    public function canDeleteUser($currentUserId, $targetUserId) {}
 
     /**
      * Update user
@@ -51,13 +52,17 @@ class UserModel extends BaseModel {
     public function updateUser($input) {
         $sql = 'UPDATE users SET 
                  name = "' . mysqli_real_escape_string(self::$_connection, $input['name']) .'", 
-                 password="'. md5($input['password']) .'"
-                WHERE id = ' . $input['id'];
-
-        $user = $this->update($sql);
-
-        return $user;
+                 password = "' . $input['password'] . '"
+                WHERE id = ' . intval($input['id']);
+    
+        if (!$this->update($sql)) {
+            echo 'Error updating user: ' . mysqli_error(self::$_connection);
+        }
+    
+        return $this->update($sql);
     }
+    
+    
 
     /**
      * Insert user
