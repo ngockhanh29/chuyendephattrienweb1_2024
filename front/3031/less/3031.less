@@ -1,0 +1,130 @@
+.type-3031{
+    background-color: white;
+    padding-top: 0.05px;
+    padding-bottom: 0.05px;
+    .col-1{
+        background-color: rgb(234, 234, 234);
+        text-align: center;
+        padding-bottom: 50px;
+        color: black;
+    }
+    .col-2{
+        display: flex; 
+        overflow: hidden;
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0.1);
+        border: 1px solid #e0e0e0;
+
+        .info-item{
+            display: flex;
+            justify-content: left;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .info-item a{
+            color: black;
+            font-weight: bold;
+        }
+        .info-item a:hover{
+            color: deepskyblue;
+        }
+        #icon{
+        margin-left: 5px;
+        padding-top: 5px;
+        font-size: 10px;
+        color: deepskyblue;
+        }
+        .info-item2{
+            margin-left: 10px;
+        }
+        .info-item2 a{
+            color: deepskyblue;
+            font-weight: bold;
+        }
+    }
+    .col-3{
+        padding-top: 70px;
+        .col-4 h1{
+            color: deepskyblue;
+            font-size: 30px;
+        }
+        .content-wrapper {
+            position: relative;
+            margin-top: 20px;
+        }
+        .content-wrapper p {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            color: darkgrey;
+            padding: 20px;
+            z-index: 1;
+        }
+        .image-logo {
+            display: flex;
+            margin-left: 60%;
+        }
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin-top: 65%;
+        }
+        .signature{
+            margin-top: -60px;
+        }
+        .image-container {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+          }
+        .image-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: transparent;
+            transition: background-color 0.3s;
+            z-index: 1;
+        }
+        
+        .image {
+            transition: transform 0.5s;
+        }
+        .icon-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            transition: border-color 0.3s;
+            z-index: 2; 
+        }
+        .icon {
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-left: 20px solid #fff;
+            border-bottom: 10px solid transparent;
+            transition: transform 0.3s;
+        }
+        .icon-container:hover .icon {
+            transform: scale(1.2);
+        }
+        .image-container:hover .image {
+            transform: scale(1.1); 
+        }
+        .image-container:hover .image-background {
+            background-color: rgba(116, 192, 255, 0.5);
+        }
+    }
+}
